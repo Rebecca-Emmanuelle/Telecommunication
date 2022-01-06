@@ -1,0 +1,276 @@
+﻿/*fichier css style1.css*/
+
+/*gestion des viewport (lié au meta viewport des fichiers html)
+sert à adapter le site web en fonction du point de vue de l'usager
+selon la taille du média utilisé.
+On donne 3 tailles: cellulaire, tablette et écran*/
+
+/* Écran d'ordi (Large desktop) */
+@media (min-width: 1200px) { 
+    body    {
+        padding-left: 50px;
+        padding-right: 50px;
+        /*background-color: green;*/
+    }
+}
+
+/* Grandes tablettes et petits écrans d'ordi (Portrait tablet to landscape and desktop) */
+@media (min-width: 768px) and (max-width: 1199px) { 
+    body    {
+        padding-left: 30px;
+        padding-right: 30px;
+        /*background-color: purple;*/
+    }
+}
+
+/* Cellulaire en format payasage et tablette portrait (Landscape phone to portrait tablet) */
+@media (max-width: 767px) { 
+    body    {
+        padding-left: 20px;
+        padding-right: 20px;
+        /*background-color: blue;*/
+    }
+}
+
+/* Cellulaire en format payasage et plus petit (Landscape phones and down) */
+@media (max-width: 480px) { 
+    body    {
+        padding-left: 5px;
+        padding-right: 5px;
+        /*background-color: red;*/
+    }
+}
+
+@font-face {
+  font-family: fontnoel;
+  src: url("../police/PWHappyChristmas.ttf");
+}
+
+/*--------------------------------------------------------------------*/
+
+/*s'applique à tous les body de toutes les pages.
+body représente l'ensemble de l'écran visible
+Se qui se trouve dans body va hériter des attributs de body
+Principe de cascade et d'héritage*/
+html{
+  
+}
+
+body{
+    background-color:black;
+    text-align:center;
+    margin:0px;
+    padding:0px;
+     /*box-sizing: border-box; annule les marges et le padding,
+     les bordures, pour conserver les éléments à leur vrai taille*/
+}
+
+#irlande{
+    background-image:url("../image/vacances.jpg"); /*image en arrière plan sur la page irlande*/
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+/*section dans le body. Détermine la largeur standard de base pour les écrans*/
+#wrap{
+    width:960px;
+    margin:auto; /*centre automatiquement dans la zone*/
+    background-color:blue;
+}
+
+/*en-tête des pages*/
+header{
+   /* background-color:yellow;
+    background-color:rgba(255,0,0,0.3);*/
+}
+
+/*titre de niveau 1 DANS les header*/
+header h1{
+    color:#e91e63;
+    font-family:fontnoel, "Comic Sans MS", Tahoma, Verdana;
+    font-size:4em;/*taille de la police, relatif. va aussi déterminer la hauteur du header*/
+    margin:0px; /*sinon, déborde en haut et en bas et repousse les zones*/
+}
+
+/*menu de navigation*/
+nav{
+    background-color:#76abd7;
+    padding:5px;/*pour voir le nav sous le ul*/
+}
+
+/*bloc de liste à puces dans le menu*/
+nav ul{
+     background-color:blue;
+     list-style-type:none;/*enlève les puces*/
+     padding:0px;/*enleve le retrait positif gauche de laliste à puces*/
+}
+
+/*chaque item dans la liste à puces, dans le menu*/
+nav ul li{
+    background-color:red;
+    display:inline-block;/*aligne les items des puces ensemble;*/
+    margin-left:10px;/*sépare les puces*/
+    margin-right:10px;
+}
+
+/*chaque hyperlien dans un item, dans la liste à puce, dans le menu*/
+nav ul li a{
+    color: white;
+    font-family:"Comic Sans MS", Tahoma, Verdana, Arial;
+    font-size:1em;
+    text-decoration: none;  /*enlève le souligné*/
+}
+
+.bouton { /*apparence des boutons*/
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 1.2em;
+    border-width: 10px;
+    border-color: black;
+    border-radius: 25%;
+}
+
+.deroule {
+    position: relative;
+    display: inline-block;
+}
+
+.deroule-contenu { /*apparence de la liste qui se déroule*/
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align:left;
+    padding-left: 10px;
+}
+
+.deroule-contenu a { /*apparence des liens dans la liste qui se déroule*/
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.deroule-contenu a:hover {background-color: #ddd;}  /*apparence des liens dans la liste qui se déroule quand j’hover*/
+.deroule:hover .deroule-contenu {display: block;}
+.deroule:hover .bouton {background-color: #3e8e41;}
+
+
+/*s'applique aux balises (une par page avec le id) dont le id est irlande.
+Dans ce cas-ci, s'applique au body de la page irlande*/
+
+
+/*section centrale des pages*/
+main{
+    background-color:pink;
+    /*margin:0px;*/
+    
+    /*padding:5%;*/
+    
+    /*padding-top:10px;
+    padding-right:5%;
+    padding-bottom:20px;
+    padding-left:5%;*/
+    
+    padding: 10px 5% 20px 5%;
+}
+
+
+main h2{
+    color:white;
+    font-family:"Century Gothic", Tahoma, Verdana, Arial;
+    font-size:2em;
+    margin:0px;
+    padding-top:1%;
+    padding-bottom:1%;
+}
+
+main h3{
+    color:darkblue;
+    font-family:"Century Gothic", Tahoma, Verdana, Arial;
+    font-size:1.1em;
+    margin:20px;
+    padding-top:1%;
+}
+
+/*style de base des paragraphes de la section milieu*/
+main p{
+    color: black;
+    font-family:Tahoma, Verdana, Helvetica, Arial;
+    font-size: 0.9em;
+    text-align: justify;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+/*class de style citation, s'applique sur certains éléments*/
+.citation{
+    color:green;
+    font-family:"Book Antiqua", Tahoma, Verdana, Arial;
+    font-size:0.8em;
+    font-style:italic;
+    font-weight:bold;
+    text-align: right;
+    margin:30px;
+    padding:0px;
+   
+}
+
+/*class utilisée pour regrouper ensemble deux éléments côte-à-côte*/
+.deuxcol{
+    background-color: red;
+    padding:1% 0px 1% 0px;
+    
+}
+/*class pour limiter un élément à une demi page pour le mettre à côté d'un autre*/
+.demipage{
+    /*display est super important!! permet de mettre 2 conteneurs côte-à-côte
+    au lieu de les superposer, si leur taille le permet dans l'espace disponible.
+    Les 2 conteneurs doivent être inline-block et se suivre dans le html*/
+    display:inline-block;
+    width:48%; /*larger de la zone*/
+    vertical-align: middle; /*alignement vertical avec les zones adjacentes*/
+    margin:0px;/*espacement entre les zones*/
+    padding:0px;  
+}
+
+/*class pour styler les legendes sous les images*/
+.legende{
+    color:black;
+    font-family:"Book Antiqua", Tahoma, Verdana, Arial;
+    font-size:0.5em;
+    font-style:italic;
+    text-align: center;
+    margin:0px;
+    padding:0px;
+}
+
+/*bloc contenant généralement une image*/
+figure{
+    margin:0px;
+    padding:0px;
+}
+
+/*pied de page*/
+footer{
+    background-color:white;
+    margin:0px;
+    padding:10px;
+    
+}
+footer nav{
+  background-color:black;
+  
+}
+
+footer p{
+    margin:0px;
+    padding:0px;
+    
+}
+footer nav ul li a{
+    color:darkblue;
+    font-size:0.5em;
+    font-family:Tahoma, Verdana, Helvetica, Arial;
+}

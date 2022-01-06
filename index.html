@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html> <!-- version du html utilisé -->
+<html> <!-- type de fichier -->
+<head> <!-- information pour le navigateur -->
+	<title>Les voyages</title> <!-- titre de la page dans l'onglet -->
+	<meta charset="utf-8"/><!-- encodage -->
+	<link rel="stylesheet" type="text/css" href="css/style1.css"/><!-- chemin relatif vers le fichier css -->
+	<meta name="viewport" content="width=device-width; maximum-scale=1; minimum-scale=1;" /><!-- lié au css, détection du média de l'usager pour adapter le site web -->
+
+</head>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<body><!-- début de ce qui apparaît à l'écran -->
+	<section id="wrap"><!-- section dans le body pour établir largeur de base à 960px (standard) -->
+		<header><!-- en-tête de page -->
+			<h1>L'art du Voyage!</h1><!-- titre de niveau 1 dans l'en-tête -->
+		</header>
+		
+		
+		<nav><!-- menu de navigation, sous le header et de même niveau -->
+			<ul><!-- liste à puce dans le menu-->
+			<!-- li=puce de la liste. a=hyperlien, attribut href=chemin d'accès relatif-->
+				<li><button class="bouton"><a href="index.html">Accueil</a></button></li>
+				<li class="deroule"><button class="bouton">Pays visités</button>
+					<ul class="deroule-contenu">
+				 		<li><a href="page/irlande.html">Irlande</a></li>
+						<li><a href="page/mexique.html">Mexique</a></li>
+						<li><a href="page/haiti.html">Haïti</a></li>
+					</ul>
+				</li>
+					
+			</ul>
+		</nav>
+		
+				
+		<main><!-- section centrale, sous le menu -->
+			<h2>Mes dernières vacances...</h2><!-- titre de niveau 2 dans main -->
+			
+				
+			<!-- insertion d'un document externe dans la page web, dans ce cas-ci un vidéo en streaming de youtube -->
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/6khzvlZuR10" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			
+			<!-- paragraphe avec class pour style ajusté à partir du p mais avec des extras-->
+			<p class="citation">Voyager, c'est naître et mourir à chaque instant!  </br>- Victor Hugo -</p>
+						
+			<!-- paragraphe standard -->
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+			et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+			Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+			Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+			
+			<section class="deuxcol">
+				<p class="demipage">Lorem Ipsum: texte de remplissage que l'on peut générer en attendant d'avoir notre vrai contenu.
+					On peut le générer sur le site <a href="http://www.blindtextgenerator.com/fr" target="_blank">Blind Text Generator</a>.
+					On choisit le nombre de mot, de paragraphes, la largeur de notre section... Il nous offre même, dans les options avancées, le css!
+					Vous pouvez aussi cliquer sur l'image pour vous yrendre :)</p>
+				
+				<figure class="demipage">
+					<a href="http://www.blindtextgenerator.com/fr" target="_blank"> <!-- target="_blank" fait que le lien va s'ouvrir dans un nouvel onglet-->
+						<img src="image/blindtext.jpg" alt="Image du blind text generator"/></a><!-- l'image est DANS le lien <a>, donc l'image est un lien -->
+				</figure>
+			</section>
+			
+			<h3>Une image vaut mille mots!</h3>
+			<p class="citation">Une personne qui n'a jamais commis d'erreurs n'a jamais tenté d'innover </br>- Albert Einstein-</p>
+						
+			<!-- insertion d'une image avec une légende en dessous dans un conteneur figure-->
+			<figure>
+				<figcaption class="legende">Image de mes dernières vacances &copy;</figcaption><!--alt0169 pour le copyright ou &copy;-->
+				<img src="image/vacances.jpg" alt="Image des vacances"/>
+				
+			</figure>
+			
+		</main>	
+		
+		<footer>
+			<nav><!-- menu de navigation, sous le header et de même niveau -->
+			<ul><!-- liste à puce dans le menu-->
+			<!-- li=puce de la liste. a=hyperlien, attribut href=chemin d'accès relatif-->
+				<li><a href="page/plan.html">Plan du site</a></li>
+				<li><a href="mailto:herouxmc@csdm.qc.ca">Courriel webmestre</a></li>
+			</ul>
+		</nav>
+			
+		</footer>
+	</section>
+</body>
+</html>
